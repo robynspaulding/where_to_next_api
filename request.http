@@ -20,3 +20,15 @@ Content-Type: application/json
 
 ### Trips index action
 GET http://localhost:3000/trips.json
+
+### Trips create action
+POST http://localhost:3000/trips.json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "title": "create action test title",
+  "image_url": "test.png",
+  "start_time": "2022-12-22",
+  "end_time": "2022-12-23"
+}
