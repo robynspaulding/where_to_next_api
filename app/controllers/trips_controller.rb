@@ -1,5 +1,6 @@
 class TripsController < ApplicationController
-
+  before_action :authenticate_user
+  
   def index 
     trips = Trip.all 
     render json: trips.as_json

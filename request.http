@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njc5NDA5OTN9.EDRAHw-3mDQXp2EA3KAlXR3oHT8rLRwvt7JDCeUcmq0
+
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
@@ -20,9 +22,11 @@ Content-Type: application/json
 
 ### Trips index action
 GET http://localhost:3000/trips.json
+Authorization: Bearer {{jwt}}
 
 ### Trips create action
 POST http://localhost:3000/trips.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -35,14 +39,16 @@ Content-Type: application/json
 
 ### Trips show action
 GET http://localhost:3000/trips/3.json
+Authorization: Bearer {{jwt}}
 
 ### Trips update action
 PATCH http://localhost:3000/trips/3.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
   "user_id": 1,
-  "title": "Update action test title",
+  "title": "Update action test title!!",
   "image_url": "test.png",
   "start_time": "2022-12-22",
   "end_time": "2022-12-23"
@@ -50,3 +56,4 @@ Content-Type: application/json
 
 ### Trips destroy action
 DELETE http://localhost:3000/trips/2.json
+Authorization: Bearer {{jwt}}
