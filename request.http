@@ -30,8 +30,7 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "user_id": 1,
-  "title": "create action test title",
+  "title": "testing user_id = current_user.id in trip controller create action",
   "image_url": "test.png",
   "start_time": "2022-12-22",
   "end_time": "2022-12-23"
@@ -42,13 +41,12 @@ GET http://localhost:3000/trips/3.json
 Authorization: Bearer {{jwt}}
 
 ### Trips update action
-PATCH http://localhost:3000/trips/3.json
+PATCH http://localhost:3000/trips/5.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "user_id": 1,
-  "title": "Update action test title!!",
+  "title": "testing user_id = current_user.id in trip controller create action!!",
   "image_url": "test.png",
   "start_time": "2022-12-22",
   "end_time": "2022-12-23"
