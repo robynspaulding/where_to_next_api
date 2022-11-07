@@ -9,3 +9,5 @@
 Trip.create(user_id: 1, title: "test trip", image_url: "test_url", start_time: "2022-11-07", end_time: "2022-11-07")
 
 Trip.create(user_id: 1, title: "second test title", image_url: "2nd_test_url", start_time: "2022-11-07", end_time:"2022-11-07")
+
+Place.create(trip_id: 1, address: "test address", name: "test name", description: "test description but i think it needs to be long", image_url: "test.png", start_time: "2022-12-07", end_time:"2022-12-07")
