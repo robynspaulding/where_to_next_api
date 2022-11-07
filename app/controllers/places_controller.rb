@@ -41,7 +41,7 @@ class PlacesController < ApplicationController
   def destroy
     place = Place.find_by(id: params[:id])
     place.destroy
-    render json: {message: "place successfully deleted"}
+    render json: {message: "Place successfully deleted"}
   end
 
 end
