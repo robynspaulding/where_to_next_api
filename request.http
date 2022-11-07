@@ -17,3 +17,6 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+
+### Trips index action
+GET http://localhost:3000/trips.json
