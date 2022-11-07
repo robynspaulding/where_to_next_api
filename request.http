@@ -47,3 +47,6 @@ Content-Type: application/json
   "start_time": "2022-12-22",
   "end_time": "2022-12-23"
 }
+
+### Trips destroy action
+DELETE http://localhost:3000/trips/2.json
