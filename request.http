@@ -55,3 +55,46 @@ Content-Type: application/json
 ### Trips destroy action
 DELETE http://localhost:3000/trips/2.json
 Authorization: Bearer {{jwt}}
+
+
+### places index action
+GET http://localhost:3000/places.json
+Authorization: Bearer {{jwt}}
+
+### places create action
+POST http://localhost:3000/places.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "trip_id": 4, 
+  "address": "testing places create action",
+  "name": "test name",
+  "description": "test description",
+  "image_url": "test.png",
+  "start_time": "2022-12-22",
+  "end_time": "2022-12-23"
+}
+
+### places show action
+GET http://localhost:3000/places/2.json
+Authorization: Bearer {{jwt}}
+
+### places update action
+PATCH http://localhost:3000/places/1.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "trip_id": 1, 
+  "address": "testing places update action!!!",
+  "name": "test name",
+  "description": "test description",
+  "image_url": "test.png",
+  "start_time": "2022-12-22",
+  "end_time": "2022-12-23"
+}
+
+### places destroy action
+DELETE http://localhost:3000/places/2.json
+Authorization: Bearer {{jwt}}
