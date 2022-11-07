@@ -35,3 +35,15 @@ Content-Type: application/json
 
 ### Trips show action
 GET http://localhost:3000/trips/3.json
+
+### Trips update action
+PATCH http://localhost:3000/trips/3.json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "title": "Update action test title",
+  "image_url": "test.png",
+  "start_time": "2022-12-22",
+  "end_time": "2022-12-23"
+}
