@@ -32,3 +32,6 @@ Content-Type: application/json
   "start_time": "2022-12-22",
   "end_time": "2022-12-23"
 }
+
+### Trips show action
+GET http://localhost:3000/trips/3.json
