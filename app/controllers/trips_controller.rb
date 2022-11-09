@@ -2,7 +2,7 @@ class TripsController < ApplicationController
   before_action :authenticate_user
 
   def index 
-    @trips = Trip.all 
+    @trips = current_user.trips  
     render template: "trips/index"
   end
 
