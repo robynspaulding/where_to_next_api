@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgwMTQ0Njd9.QeGD5tO1czmB3OyqYV8IN492x4-aoz1D26od8AAvcdo
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgxMDI5MTJ9.qaE6aR6ww7RRN60FVGZz7f7a9qq1EhYGihqMWodUWBk
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -31,7 +31,7 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "title": "testing user_id = current_user.id in trip controller create action",
+  "title": "testing views template in create action.",
   "image_url": "test.png",
   "start_time": "2022-12-22",
   "end_time": "2022-12-23"
@@ -42,12 +42,12 @@ GET http://localhost:3000/trips/3.json
 Authorization: Bearer {{jwt}}
 
 ### Trips update action
-PATCH http://localhost:3000/trips/5.json
+PATCH http://localhost:3000/trips/6.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "title": "testing user_id = current_user.id in trip controller create action!!",
+  "title": "testing views template in update action!",
   "image_url": "test.png",
   "start_time": "2022-12-22",
   "end_time": "2022-12-23"
