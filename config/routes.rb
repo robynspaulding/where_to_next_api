@@ -24,5 +24,5 @@ Rails.application.routes.draw do
   delete "/places/:id" => "places#destroy"
   
   # Search routes
-  get "/search" => "search#index"
+  post "/search" => "search#index"
 end
