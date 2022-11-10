@@ -8,16 +8,21 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   # Sessions Routes
   post "/sessions" => "sessions#create"
+  
   # Trips Routes
   get "/trips" => "trips#index"
   post "/trips" => "trips#create"
   get "/trips/:id" => "trips#show"
   patch "/trips/:id" => "trips#update"
   delete "/trips/:id" => "trips#destroy"
+  
   # Places Routes
   get "/places" => "places#index"
   post "/places" => "places#create"
   get "/places/:id" => "places#show"
   patch "/places/:id" => "places#update"
   delete "/places/:id" => "places#destroy"
+  
+  # Search routes
+  get "/search" => "search#index"
 end

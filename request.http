@@ -99,3 +99,6 @@ Content-Type: application/json
 ### places destroy action
 DELETE http://localhost:3000/places/2.json
 Authorization: Bearer {{jwt}}
+
+### Search index
+GET http://localhost:3000/search.json?
