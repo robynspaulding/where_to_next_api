@@ -1,11 +1,10 @@
 class SearchController < ApplicationController
-   
   def index
     p params
     search = GoogleSearch.new(
       q: params["q"], 
       location: params["location"], 
-      serp_api_key: "c143d7cca3835e1e7ef0ad92d30435da9e98c79fa4096fda69405815bdc18ef9"
+      serp_api_key: "#{Rails.application.credentials.serpApi_key}"
     )
     hash_results = search.get_hash
 
@@ -13,6 +12,4 @@ class SearchController < ApplicationController
 
     render json: hash_results
   end
-
-
 end
