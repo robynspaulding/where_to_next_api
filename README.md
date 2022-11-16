@@ -29,7 +29,7 @@ rails server
 
 You can test web requests as documented in the `requests.http` file.
 
-## Roadmap
+## Future plans
 
 While this is currently a basic, user input only trip planner my goal is to create another backend api to act as a third party api which will house a database of Scuba Diving sites including the name and description of the site, a list of common sea life and topography, longitude and latitude and how it’s accessed either by boat or from the shore. My plan is to begin with California dive sites and add locations to the database over time.
 
