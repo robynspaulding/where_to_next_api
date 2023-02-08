@@ -1,8 +1,13 @@
 class PlacesController < ApplicationController
 
-  def index 
-    @places = Place.all 
-    render json: @places.as_json
+  def index
+    trip = Trip.find_by(id: params[:trip_id])
+    
+    if trip
+      render json: trip.places
+    else
+      render json: { error: "trip not found" }
+    end
   end
 
   def create

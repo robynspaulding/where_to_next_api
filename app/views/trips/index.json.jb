@@ -4,6 +4,7 @@
     title: trip.title,
     image_url: trip.image_url,
     start_time: trip.start_time,
-    end_time: trip.end_time
+    end_time: trip.end_time,
+    places: trip.places
   }
 end
