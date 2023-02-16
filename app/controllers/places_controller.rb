@@ -1,5 +1,7 @@
 class PlacesController < ApplicationController
 
+  before_action :place, only: [:show, :update, :destroy]
+
   def index
     trip = Trip.find_by(id: params[:trip_id])
     
@@ -11,7 +13,7 @@ class PlacesController < ApplicationController
   end
 
   def create
-    @place = Place.new(
+    place = Place.new(
       trip_id: params[:trip_id],
       address: params[:address],
       name: params[:name],
@@ -20,33 +22,34 @@ class PlacesController < ApplicationController
       start_time: params[:start_time],
       end_time: params[:end_time]
     )
-    @place.save
-    render json: @place.as_json
+    place.save
+    render json: place.as_json
   end
 
   def show
-    @place = Place.find_by(id: params[:id])
     render json: @place.as_json
   end
 
   def update
-    @place = Place.find_by(id: params[:id])
-
-    @place.address = params[:address] || @place.address
-    @place.name = params[:name] || @place.name
-    @place.description = params[:description] || @place.description
-    @place.image_url = params[:image_url] || @place.image_url
-    @place.start_time = params[:start_time] || @place.start_time
-    @place.end_time = params[:end_time] || @place.end_time
+    @place.update(
+      address: params[:address] || place.address,
+      name: params[:name] || place.name,
+      description: params[:description] || place.description,
+      image_url: params[:image_url] || place.image_url,
+      start_time: params[:start_time] || place.start_time,
+      end_time: params[:end_time] || place.end_time
+    )
     
-    @place.save
     render json: @place.as_json 
   end
 
   def destroy
-    @place = Place.find_by(id: params[:id])
     @place.destroy
     render json: {message: "Place successfully deleted"}
   end
 
+  private
+    def place
+      @place ||= Place.find_by!(id: params.require(:id))
+    end
 end
