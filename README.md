@@ -8,8 +8,8 @@ Where To Next? is a travel planning app that allows a user to create a trip and 
 # Technology used:
 - <a href="https://github.com/robynspaulding/where_to_next_api">Ruby on Rails backend - This Repo!</a>
 - <a href="https://github.com/robynspaulding/where_to_next_react_frontend">React.js frontend</a>
-- <a href="https://www.npmjs.com/package/react-datetime-picker">React DateTime Picker</a>
-- <a href="https://github.com/marnusw/date-fns-tz">Date-fns-tz</a>
+- <a href="https://www.npmjs.com/package/react-date-picker">React DatePicker</a>
+- <a href="https://momentjs.com">Moment js library</a>
 
 
 
