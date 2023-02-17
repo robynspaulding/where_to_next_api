@@ -31,7 +31,7 @@ User.create(
 )
 
 Trip.create(
-  user_id: 3, 
+  user_id: 1, 
   title: "Fiji Scuba Diving Trip", 
   image_url: "https://www.scuba.com/blog/wp-content/uploads/2011/03/Map-Fiji-copy.jpg", 
   start_time: "2023-02-21", 
@@ -39,7 +39,7 @@ Trip.create(
 )
 
 Trip.create(
-  user_id: 1, 
+  user_id: 2, 
   title: "Niagara Falls Trip", 
   image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkbP1PQYJS8eYy1rlMIXDyUr8BH4ItMt9CWm1DfOr6Rg&s", 
   start_time: "2023-04-02", 
@@ -47,7 +47,7 @@ Trip.create(
 )
 
 Trip.create(
-  user_id: 2, 
+  user_id: 3, 
   title: "New Years in Yosemite", 
   image_url: "https://images.unsplash.com/photo-1562310503-a918c4c61e38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8eW9zZW1pdGUlMjBuYXRpb25hbCUyMHBhcmt8ZW58MHx8MHx8&w=1000&q=80", 
   start_time: "2022-12-29", 
